@@ -1,7 +1,0 @@
-www.google.com
-www.cnn.com
-www.yahoo.com
-
-github.com
-www.coxandforkum.com
-www.hackreactor.com
