@@ -72,7 +72,6 @@ var tokenizeUrl = function(url){
 
 var router = function(method, urlTokens){
   var currentMap = routeMap[method];
-  console.log(urlTokens[0], currentMap[urlTokens[0]]);
   return currentMap[urlTokens[0]] || currentMap['*'];
 };
 
