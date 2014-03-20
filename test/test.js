@@ -23,7 +23,7 @@ beforeEach(function(){
 
 describe("Node Server Request Listener Function", function() {
 
-  it("Should answer GET requests for /", function(done) {
+  it("1 Should answer GET requests for /", function(done) {
     var req = new stubs.Request("/", "GET");
 
     handler.handleRequest(req, res);
@@ -37,7 +37,7 @@ describe("Node Server Request Listener Function", function() {
     });
   });
 
-  it("Should answer GET requests for archived websites", function(done) {
+  it("2 Should answer GET requests for archived websites", function(done) {
     var fixtureName = "www.google.com";
     var req = new stubs.Request("/" + fixtureName, "GET");
 
@@ -52,7 +52,7 @@ describe("Node Server Request Listener Function", function() {
     });
   });
 
-  it("Should append submitted sites to 'sites.txt'", function(done) {
+  it("3 Should append submitted sites to 'sites.txt'", function(done) {
     var url = "www.example.com";
     var req = new stubs.Request("/", "POST", {url: url});
 
@@ -70,7 +70,7 @@ describe("Node Server Request Listener Function", function() {
     });
   });
 
-  it("Should 404 when asked for a nonexistent file", function(done) {
+  it("4 Should 404 when asked for a nonexistent file", function(done) {
     var req = new stubs.Request("/arglebargle", "GET");
 
     handler.handleRequest(req, res);
@@ -87,7 +87,7 @@ describe("Node Server Request Listener Function", function() {
 
 describe("html fetcher helpers", function(){
 
-  it("should have a 'readListOfUrls' function", function(done){
+  it("5 should have a 'readListOfUrls' function", function(done){
     var urlArray = ["example1.com", "example2.com"];
     var resultArray;
 
@@ -104,7 +104,7 @@ describe("html fetcher helpers", function(){
     });
   });
 
-  it("should have a 'downloadUrls' function", function(){
+  it("6 should have a 'downloadUrls' function", function(){
     expect(typeof archive.downloadUrls).to.equal('function');
   });
 
