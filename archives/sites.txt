@@ -1,0 +1,6 @@
+www.google.com
+www.cnn.com
+www.yahoo.com
+www.github.com
+www.easycron.com
+bookstrap.hackreactor.com
