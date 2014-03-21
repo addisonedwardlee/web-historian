@@ -7,7 +7,10 @@
   "dependencies": {
     "underscore": "~1.6.0",
     "mime": "~1.2.11",
-    "mysql": "~2.1.1"
+    "mysql": "~2.1.1",
+    "binary-string": "~1.0.0",
+    "node-cryptojs-aes": "~0.4.0",
+    "zlib": "~1.0.5"
   },
   "devDependencies": {
     "request": "^2.34.0",

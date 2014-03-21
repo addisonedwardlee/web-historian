@@ -46,7 +46,16 @@ var postArchive = function(req, res){
   });
   req.on('end', function(){
     archive.loadFile(message.slice(4), function(contentType, content){
-      respondFile(res, contentType, content);
+      if(!contentType){
+        //loading screen
+        console.log('loading screen about to fire');
+        publicFiles.loadFile(paths.siteAssets + '/loading.html', function publicLF(contentType, content){
+          respondFile(res, contentType, content);
+        });
+      } else {
+        //give back html
+        respondFile(res, contentType, content);
+      }
     });
   });
 };
